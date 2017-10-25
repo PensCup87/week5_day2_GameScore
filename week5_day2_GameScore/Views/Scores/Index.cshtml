@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<week5_day2_GameScore.Models.Score>
+@*the IEnumerable is very similar to a list, but missing a few features*@
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index";  /*sets the page title*/
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create") @*ActionLink creates a link named the 1st parameter with Create Method*@
 </p>
 <table class="table">
     <tr>
@@ -17,16 +18,21 @@
         <th>
             @Html.DisplayNameFor(model => model.Points)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team) @*ADDED TEAM*@
+        </th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model) {@*each interation populates a new row*@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Points)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team)@*//Added TEAM*@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

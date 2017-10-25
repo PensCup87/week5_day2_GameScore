@@ -136,6 +136,10 @@
     <Compile Include="Migrations\201710241907164_InitialCreate.Designer.cs">
       <DependentUpon>201710241907164_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710251817171_AddTeams.cs" />
+    <Compile Include="Migrations\201710251817171_AddTeams.Designer.cs">
+      <DependentUpon>201710251817171_AddTeams.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\week5_day2_GameScoreContext.cs" />
@@ -208,6 +212,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710241907164_InitialCreate.resx">
       <DependentUpon>201710241907164_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251817171_AddTeams.resx">
+      <DependentUpon>201710251817171_AddTeams.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

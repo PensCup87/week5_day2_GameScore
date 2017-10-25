@@ -56,7 +56,7 @@ namespace week5_day2_GameScore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Points")] Score score)
+        public ActionResult Create([Bind(Include = "ID,Name,Points,Team")] Score score)
         {
             if (ModelState.IsValid)//makes sure the db is functioning properly before accepting information (BUILT IN)
             {
@@ -90,7 +90,7 @@ namespace week5_day2_GameScore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Points")] Score score)
+        public ActionResult Edit([Bind(Include = "ID,Name,Points,Team")] Score score)
         {
             if (ModelState.IsValid)
             {
